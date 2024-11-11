@@ -10,7 +10,7 @@ function App() {
   const submitQuery = async (e) => {
     e.preventDefault();
    
-    const resposne = await fetch('http://localhost:3000/register', {
+    const resposne = await fetch('https://instaserver-m4bb.onrender.com/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
