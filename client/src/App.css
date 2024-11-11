@@ -1,0 +1,130 @@
+/* Reset some styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+}
+
+/* Login Page Styling */
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Container for login */
+.login-container {
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+  padding: 40px;
+  width: 350px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.app-logo {
+  font-family: "Billabong", cursive;
+  font-size: 3em;
+  color: #262626;
+  margin-bottom: 30px;
+}
+
+/* Form Styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-input {
+  background-color: #fafafa;
+  border: 1px solid #dbdbdb;
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+
+.login-button {
+  background-color: #0095f6;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.login-button:hover {
+  background-color: #007bb5;
+}
+
+/* Divider Styling */
+.divider {
+  display: flex;
+  align-items: center;
+  color: #8e8e8e;
+  font-size: 13px;
+  margin: 20px 0;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: #dbdbdb;
+}
+
+.divider span {
+  margin: 0 10px;
+}
+
+/* Social Login Styling */
+.facebook-login {
+  color: #385185;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.facebook-login i {
+  margin-right: 8px;
+}
+
+.forgot-password {
+  color: #00376b;
+  font-size: 12px;
+  margin-top: 15px;
+  text-decoration: none;
+}
+
+/* Sign up container styling */
+.signup-container {
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+  padding: 20px;
+  width: 350px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.signup-container p {
+  color: #262626;
+}
+
+.signup-container a {
+  color: #0095f6;
+  text-decoration: none;
+}
