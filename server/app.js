@@ -22,16 +22,20 @@ app.post("/register", (req, res) => {
 
   let users = [];
 
-  // Load existing users data
+  // Load existing users data or create file if it doesn't exist
   try {
     if (fs.existsSync(filePath)) {
       const data = fs.readFileSync(filePath, "utf8");
       users = data ? JSON.parse(data) : []; // Handle empty file scenario
       console.log("Existing users loaded:", users); // Debug log
+    } else {
+      // Create the file with an empty array if it doesn't exist
+      fs.writeFileSync(filePath, JSON.stringify([]), "utf8");
+      console.log("users.json file created as it was missing."); // Debug log
     }
   } catch (error) {
-    console.error("Error reading users file:", error);
-    return res.status(500).json({ error: "Failed to read users data." });
+    console.error("Error reading or initializing users file:", error);
+    return res.status(500).json({ error: "Failed to read or initialize users data." });
   }
 
   // Add the new user data
@@ -62,7 +66,7 @@ app.get("/data", (req, res) => {
       res.json(data ? JSON.parse(data) : []);
     } catch (parseError) {
       console.error("Error parsing JSON:", parseError);
-      res.status(500).json({ message: "Error parsing JSON data" });
+      res.status(500).json({ message: "Error parsing JSON data", data: [] });
     }
   });
 });
